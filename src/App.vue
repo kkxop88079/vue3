@@ -1,13 +1,7 @@
 <template class="">
-  <div class="bg-bgimg w-screen h-screen bg-cover overflow-x-hidden ">
-    <div class="fixed  w-12 h-12 justify-center items-center  bottom-10 right-2 z-50">
-      <a href="#header" class="flex justify-center items-center">
-        <img src="./assets/back.svg" alt="">
-      </a>
-    </div>
-    <Header id="header"></Header>
+  <div class="">
     <Works></Works> 
-    <rule></rule>
+    無內容
   </div>
 </template>
 

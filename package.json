@@ -1,0 +1,37 @@
+{
+  "name": "ben",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite-ssg build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@headlessui/vue": "^1.4.3",
+    "@tailwindcss/aspect-ratio": "^0.4.0",
+    "@tailwindcss/forms": "^0.4.0",
+    "@vueuse/core": "^7.6.1",
+    "prettier": "^2.5.1",
+    "prettier-plugin-tailwind": "^2.2.12",
+    "vue": "^3.2.25"
+  },
+  "devDependencies": {
+    "@iconify-json/mdi": "^1.0.16",
+    "@iconify/json": "^2.0.35",
+    "@tailwindcss/typography": "^0.5.1",
+    "@vitejs/plugin-vue": "^2.0.0",
+    "@vue/compiler-sfc": "^3.2.30",
+    "@vueuse/head": "^0.7.5",
+    "autoprefixer": "^10.4.2",
+    "postcss": "^8.4.6",
+    "postcss-import": "^14.0.2",
+    "tailwind-flagger": "^0.1.0",
+    "tailwindcss": "^3.0.18",
+    "unplugin-icons": "^0.13.1",
+    "unplugin-vue-components": "^0.17.17",
+    "vite": "^2.7.2",
+    "vite-plugin-pages": "^0.20.1",
+    "vite-ssg": "^0.17.10",
+    "vue-router": "^4.0.12"
+  }
+}

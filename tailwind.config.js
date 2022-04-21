@@ -5,8 +5,8 @@ const flagger = require('tailwind-flagger')
 
 module.exports = {
   content: [
-    './index.html',
-    './src/**/*.{vue,js,ts,jsx,tsx}',
+    "./src/**/*.{html, js, ts, vue}", 
+    "./src/**/*"
   ],
   theme: {
     extend: {

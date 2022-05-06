@@ -1,7 +1,8 @@
-<template class="">
-  <div class="bg-black overflow-x-hidden">
-    123
-  </div>
+<template >
+    <div class="bg-black">
+      <Works></Works> 
+    <Swiper></Swiper>
+    </div>
 </template>
 
 

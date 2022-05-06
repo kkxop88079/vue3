@@ -1,25 +1,10 @@
-<template class="">
-  <div class="bg-black overflow-x-hidden">
-    <Works></Works> 
-    <Swiper></Swiper>    
+<template class="bg-black">
+  <div class="overflow-x-hidden">
+    <router-link :to="{ name: 'home' }"></router-link>
+    <!-- <router-link :to="{ name: 'info2' }">2</router-link> -->
+    <router-view></router-view> 
   </div>
 </template>
-
-
-<script>
-import IconHome from '~icons/heroicons-outline/globe-alt'
-
-export default {
-  components: {
-    IconHome,
-  },
-}
-
-</script>
-<script setup>
-  import { useHead } from '@vueuse/head'
-  import Swiper from '../components/Swiper.vue';
-</script>
 
 <style>
 * {

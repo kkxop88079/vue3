@@ -56,7 +56,7 @@
         <div class="text-white mb-2">最新上架</div>
         <swiper 
             :slidesPerView="4"
-            :saceBetween="6"
+            :spaceBetween="6"
             :loop="true"
             :loopFillGroupWithBlank="true"
             :pagination="{
@@ -65,11 +65,13 @@
             :modules="modules"
             class="mySwiper w-full h-auto"
         >
-            <swiper-slide v-for="item of swiperList" :key="item.id">
-                <img class="swiper-img" :src="item.imgUrl"/>
+            <swiper-slide v-for="item of list_new" :key="item.id">
+                <router-link :to="{ name: 'info2', params: { id: item.id } }">
+                    <img :src="item.url" :alt="item.alt">
+                </router-link>                
             </swiper-slide>
         </swiper>
-   </div>
+    </div>
 
 
 
@@ -77,7 +79,7 @@
         <div class="text-white mb-2">最新上架</div>
         <swiper 
             :slidesPerView="4"
-            :saceBetween="6"
+            :spaceBetween="6"
             :loop="true"
             :loopFillGroupWithBlank="true"
             :pagination="{
@@ -173,10 +175,9 @@
             class="mySwiper w-full h-auto"
         >
             <swiper-slide v-for="item of list" :key="item.id">
-                <a :href="item.href" target="_blank">
+                <router-link :to="{ name: 'info2', params: { id: item.id } }">
                     <img :src="item.url" :alt="item.alt">
-                </a>
-                
+                </router-link>                
             </swiper-slide>
 
         </swiper>
@@ -200,10 +201,20 @@
     const formatUrl = (url) => new URL(url, import.meta.url)
 
     const list = ref([
-        { id: 1, url: formatUrl('../assets/r-1.png'), alt: '1', href: 'https://www.google.com.tw'},
+        { id: 1, url: formatUrl('../assets/r-1.png'), alt: '1',},
         { id: 2, url: formatUrl('../assets/r-2.png'), alt: '22' },
         { id: 3, url: formatUrl('../assets/r-3.png'), alt: '333' },
         { id: 4, url: formatUrl('../assets/r-4.png'), alt: '4444' },
+    ])
+    const list_new = ref([
+        { id: 1, url: formatUrl('../assets/01.png'), alt: '1',},
+        { id: 2, url: formatUrl('../assets/02.png'), alt: '2' },
+        { id: 3, url: formatUrl('../assets/03.png'), alt: '3' },
+        { id: 4, url: formatUrl('../assets/04.png'), alt: '4' },
+        { id: 5, url: formatUrl('../assets/05.png'), alt: '5' },
+        { id: 6, url: formatUrl('../assets/06.png'), alt: '6' },
+        { id: 7, url: formatUrl('../assets/07.png'), alt: '7' },
+        { id: 8, url: formatUrl('../assets/08.png'), alt: '8' },
     ])
 
 </script>

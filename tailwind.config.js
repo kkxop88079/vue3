@@ -21,6 +21,7 @@ module.exports = {
         'imgtop': "url('./src/assets/top.png')",
         'imgcenter': "url('./src/assets/center.png')",
         'imgbottom': "url('./src/assets/bottom.png')",
+        'infoBG': "url('./src/assets/infoBG.png')",
       },
       colors:{
         'gray':'colors.zinc',

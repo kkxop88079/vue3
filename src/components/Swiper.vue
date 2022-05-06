@@ -72,33 +72,8 @@
             </swiper-slide>
         </swiper>
     </div>
-
-
-
+    
     <div class="ml-2 font-medium mb-6">
-        <div class="text-white mb-2">最新上架</div>
-        <swiper 
-            :slidesPerView="4"
-            :spaceBetween="6"
-            :loop="true"
-            :loopFillGroupWithBlank="true"
-            :pagination="{
-            clickable: true,
-            }"
-            :modules="modules"
-            class="mySwiper w-full h-auto"
-        >
-            <swiper-slide><img src="../assets/01.png" alt=""></swiper-slide>
-            <swiper-slide><img src="../assets/02.png" alt=""></swiper-slide>
-            <swiper-slide><img src="../assets/03.png" alt=""></swiper-slide>
-            <swiper-slide><img src="../assets/04.png" alt=""></swiper-slide>
-            <swiper-slide><img src="../assets/05.png" alt=""></swiper-slide>
-            <swiper-slide><img src="../assets/06.png" alt=""></swiper-slide>
-            <swiper-slide><img src="../assets/07.png" alt=""></swiper-slide>
-            <swiper-slide><img src="../assets/08.png" alt=""></swiper-slide>
-        </swiper>
-   </div>
-   <div class="ml-2 font-medium mb-6">
         <div class="text-white mb-2">特色遊戲</div>
         <swiper 
             :slidesPerView="4"
@@ -111,16 +86,14 @@
             :modules="modules"
             class="mySwiper w-full h-auto"
         >
-            <swiper-slide><img src="../assets/08.png" alt=""></swiper-slide>
-            <swiper-slide><img src="../assets/07.png" alt=""></swiper-slide>
-            <swiper-slide><img src="../assets/06.png" alt=""></swiper-slide>
-            <swiper-slide><img src="../assets/05.png" alt=""></swiper-slide>
-            <swiper-slide><img src="../assets/04.png" alt=""></swiper-slide>
-            <swiper-slide><img src="../assets/03.png" alt=""></swiper-slide>
-            <swiper-slide><img src="../assets/02.png" alt=""></swiper-slide>
-            <swiper-slide><img src="../assets/01.png" alt=""></swiper-slide>
+            <swiper-slide v-for="item of list_feature" :key="item.id">
+                <router-link :to="{ name: 'info2', params: { id: item.id } }">
+                    <img :src="item.url" :alt="item.alt">
+                </router-link>                
+            </swiper-slide>
         </swiper>
-   </div>
+    </div>
+
    <div class="ml-2 font-medium mb-6">
         <div class="text-white mb-2">推薦遊戲</div>
         <swiper 
@@ -141,7 +114,7 @@
             <swiper-slide><img src="../assets/s-5.png" alt=""></swiper-slide>
         </swiper>
    </div>
-   <div class="ml-2 font-medium mb-6">
+   <!-- <div class="ml-2 font-medium mb-6">
         <div class="text-white mb-2">熱門排行</div>
         <swiper 
             :slidesPerView="3"
@@ -159,7 +132,7 @@
             </swiper-slide>
 
         </swiper>
-   </div>
+   </div> -->
    
    <div class="ml-2 font-medium mb-6">
         <div class="text-white mb-2">熱門排行</div>
@@ -215,6 +188,16 @@
         { id: 6, url: formatUrl('../assets/06.png'), alt: '6' },
         { id: 7, url: formatUrl('../assets/07.png'), alt: '7' },
         { id: 8, url: formatUrl('../assets/08.png'), alt: '8' },
+    ])
+    const list_feature = ref([
+        { id: 1, url: formatUrl('../assets/08.png'), alt: '1',},
+        { id: 2, url: formatUrl('../assets/07.png'), alt: '2' },
+        { id: 3, url: formatUrl('../assets/06.png'), alt: '3' },
+        { id: 4, url: formatUrl('../assets/05.png'), alt: '4' },
+        { id: 5, url: formatUrl('../assets/04.png'), alt: '5' },
+        { id: 6, url: formatUrl('../assets/03.png'), alt: '6' },
+        { id: 7, url: formatUrl('../assets/02.png'), alt: '7' },
+        { id: 8, url: formatUrl('../assets/01.png'), alt: '8' },
     ])
 
 </script>

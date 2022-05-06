@@ -1,4 +1,5 @@
 // import { ViteSSG } from 'vite-ssg/single-page'
+// import { ViteSSG } from 'vite-ssg'
 import { createApp } from 'vue'
 // import routes from "~pages";
 import App from './views/App.vue'

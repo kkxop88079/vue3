@@ -1,6 +1,6 @@
 <template >
     <div class="bg-black">
-      <Works></Works> 
+    <Works></Works> 
     <Swiper></Swiper>
     </div>
 </template>

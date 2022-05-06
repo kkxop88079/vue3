@@ -17,7 +17,7 @@ export default defineConfig({
   },
   plugins: [
     Vue(),
-    Pages(),
+    // Pages(),
     Components(
       {
         resolvers: IconsResolver(),
